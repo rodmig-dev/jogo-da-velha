@@ -1,6 +1,13 @@
 // Criação do elemento square que irá compor o tabuleiro do jogo da velha
 import './App.css';
 
+// Componente Square
+function Square(){
+  return(
+    <button className='square'>1</button>
+  )
+}
+
 export default function Square(){
   return(
     <div>
