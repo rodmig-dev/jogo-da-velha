@@ -16,11 +16,23 @@ function Square({valor, onSquareClick}){
 }
 
 export default function Tabuleiro(){
+  const [xIsNext, setIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i){
     const nextSquares = squares.slice();
-    nextSquares[i] = 'X';
+    if(nextSquares[i]){
+      return;
+    }
+    if (xIsNext){
+      nextSquares[i] = 'X';
+      //setIsNext(false);
+    }
+    else{
+      nextSquares[i] = 'O';
+      //setIsNext(true);
+    }
+    setIsNext(!xIsNext);
     setSquares(nextSquares);
   }
 
