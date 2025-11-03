@@ -1,4 +1,91 @@
-.square{
-  font-size: medium;
-  color:blue
+/* === Layout geral === */
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* === Tabuleiro do jogo === */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Status: exibe o jogador da vez ou o vencedor === */
+.status {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #e9eef3;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Cada linha do tabuleiro === */
+.board-row {
+  display: flex;
+}
+
+/* === Quadrado (botão de cada célula) === */
+.square {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 2px solid #4a90e2;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover {
+  background-color: #e3f2fd;
+}
+
+.square:active {
+  background-color: #bbdefb;
+}
+
+/* === Informações laterais (histórico de jogadas) === */
+.game-info {
+  font-size: 1rem;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+}
+
+.game-info ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-info button {
+  margin: 5px 0;
+  padding: 6px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.game-info button:hover {
+  background-color: #357abd;
 }
